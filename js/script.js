@@ -1,7 +1,4 @@
-function Gameboard() {
-
-    const gameboard = [0,0,0,0,0,0,0,0,0];
-}
+import Gameboard from "./gameboard.js"
 
 function Player(name, score) {
 
@@ -15,3 +12,6 @@ function Player(name, score) {
     }
 }
 
+let gameboard = new Gameboard();
+
+gameboard.check();
