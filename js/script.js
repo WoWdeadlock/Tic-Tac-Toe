@@ -1,17 +1,13 @@
 import Gameboard from "./gameboard.js"
+import Gamemode from "./gamemode.js";
+import {Player} from "./player.js"
 
-function Player(name, score) {
+let player1 = Player("One");
+let player2 = Player("Two");
 
-    return {
-        name: name,
-        score: score,
-        displayStats() {
+let shelf = document.querySelector(".gameboard");
 
-            return name + " - " + score;
-        }
-    }
-}
+let gameboard = new Gameboard(shelf);
+let gamemode = new Gamemode(player1, player2, gameboard);
 
-let gameboard = new Gameboard();
-
-gameboard.check();
+gamemode.start();

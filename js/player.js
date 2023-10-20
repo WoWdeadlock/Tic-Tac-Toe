@@ -1,13 +1,27 @@
-function Player(name, score) {
+export let Player = function(name) {
 
-    return {
-        name: name,
-        score: score,
-        displayStats() {
+    let player = {};
 
-            return name + " - " + score;
-        }
-    }
-}
+    player.name = name;
+    player.score = 0;
+    player.side = 0;
 
-export {Player}
+    player.displayStats = function () {
+
+        return (
+
+            "Name - " + name + ", Score - " + player.score
+
+        );
+    };
+
+    player.setValue = function (value) {
+
+        player.side = value;
+
+    };
+
+    return player;
+
+};
+
