@@ -8,6 +8,6 @@ let player2 = Player("Two");
 let shelf = document.querySelector(".gameboard");
 
 let gameboard = new Gameboard(shelf);
-let gamemode = new Gamemode(player1, player2, gameboard);
 
+let gamemode = new Gamemode(player1, player2, gameboard);
 gamemode.start();

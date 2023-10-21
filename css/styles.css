@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
 .cell {
-    height: 300px;
-    width: 300px;
+    height: 150px;
+    width: 150px;
     background-color: grey;
     border: 1px solid black;
     display: flex;
@@ -9,16 +17,16 @@
 }
 
 .cell-one {
-    height: 250px;
-    width: 250px;
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
     border: 5px solid black;
     background-color: transparent;
 }
 
 .cell-two {
-    width: 250px;
-    height: 250px;
+    width: 125px;
+    height: 125px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +56,30 @@
 
 .gameboard {
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: repeat(3,180px);
+    grid-template-rows: repeat(3, 180px);
+}
+
+header {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.863);
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.nav-bar > li {
+  font-size: 1.5rem;
+  margin-right: 50px;
+  color: white;
+}
+
+.title {
+  color: white;
 }
